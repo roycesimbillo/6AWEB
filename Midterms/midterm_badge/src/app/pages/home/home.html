@@ -1,0 +1,14 @@
+<h1>Home</h1>
+<h2>Welcome!</h2>
+<p>Welcome to homepage.</p>
+<br>
+<h2>Latest Updates</h2>
+
+<div class="grid">
+  <div class="card" *ngFor="let post of latestPosts$ | async">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.body | truncate:120 }}</p>
+  </div>
+</div>
+
+

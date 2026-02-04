@@ -1,0 +1,16 @@
+<h1>Form Preview</h1>
+
+<div class="form-card">
+  <input placeholder="Full Name" [(ngModel)]="model.name">
+  <input placeholder="Email Address" [(ngModel)]="model.email">
+  <textarea rows="4" placeholder="Message" [(ngModel)]="model.message"></textarea>
+
+  <button>Send Message</button>
+</div>
+
+<div class="preview">
+  <h3>Live Preview</h3>
+  <p><strong>Name:</strong> {{ model.name }}</p>
+  <p><strong>Email:</strong> {{ model.email }}</p>
+  <p><strong>Message:</strong> {{ model.message }}</p>
+</div>
