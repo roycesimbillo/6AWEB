@@ -1,0 +1,20 @@
+.nav {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+  background: #222;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #2a5298;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e3c72;
+}

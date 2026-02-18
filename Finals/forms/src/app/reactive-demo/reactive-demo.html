@@ -1,0 +1,22 @@
+<!-- Navigation Buttons -->
+<div class="nav-buttons">
+  <button type="button" [class.active-nav]="isActive('template')" (click)="navigate('template')">Template Form</button>
+  <button type="button" [class.active-nav]="isActive('reactive')" (click)="navigate('reactive')">Reactive Form</button>
+  <button type="button" [class.active-nav]="isActive('custom')" (click)="navigate('custom')">Custom Form</button>
+</div>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="reactive-form">
+
+  <div class="form-group">
+    <input type="text" formControlName="username" id="username" placeholder=" " required>
+    <label for="username">Username</label>
+  </div>
+
+  <div class="form-group">
+    <input type="email" formControlName="email" id="email" placeholder=" " required>
+    <label for="email">Email</label>
+  </div>
+
+  <button type="submit" [disabled]="myForm.invalid">Submit</button>
+
+</form>

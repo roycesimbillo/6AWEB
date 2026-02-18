@@ -1,0 +1,186 @@
+/* Form container styling */
+form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px 45px 25px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Form group spacing */
+form div {
+  margin-bottom: 15px;
+}
+
+/* Labels styling */
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Inputs and select styling */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+/* Focus effect for inputs */
+form input:focus,
+form select:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+/* Button styling */
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Submitted message styling */
+div[ng-reflect-ng-if="true"] {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #e6ffe6;
+  border: 1px solid #b3ffb3;
+  font-family: Arial, sans-serif;
+}
+
+div[ng-reflect-ng-if="true"] h3 {
+  color: #2e7d32;
+}
+
+div[ng-reflect-ng-if="true"] p {
+  margin: 5px 0;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.nav-buttons button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  background: #e0e0e0;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  font-size: 1rem;
+}
+.nav-buttons button.active-nav,
+.nav-buttons button:hover {
+  background: #0072ff;
+  color: #fff;
+}
+
+/* Creative Form Layout */
+.creative-form {
+  background: rgba(255,255,255,0.15);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  padding: 32px 40px 24px 40px;
+  max-width: 420px;
+  margin: 40px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.creative-form label {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+.creative-form input,
+.creative-form select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  transition: border 0.2s;
+}
+.creative-form input:focus,
+.creative-form select:focus {
+  border: 1.5px solid #0072ff;
+}
+
+/* Dynamic Submit Button */
+.creative-form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #bdbdbd;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: not-allowed;
+  transition: background 0.3s;
+}
+.creative-form button[type="submit"].filled {
+  background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+  cursor: pointer;
+}
+
+/* Submitted Data */
+.submitted-data {
+  background: #f5faff;
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin-top: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  color: #222;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+input, select, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+input:focus, select:focus, textarea:focus {
+  border: 1.5px solid #0072ff;
+}

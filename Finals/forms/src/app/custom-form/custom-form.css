@@ -1,0 +1,39 @@
+/* Reuse nav-buttons and creative-form styles from template-demo.css for consistency */
+@import '../template-demo/template-demo.css';
+
+/* Additional custom styles if needed */
+.creative-form {
+  background: rgba(255,255,255,0.15);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  padding: 32px 40px 24px 40px;
+  max-width: 420px;
+  margin: 40px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.creative-form label {
+  color: #4a148c;
+}
+.creative-form input[type="range"] {
+  width: 100%;
+}
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+input, select, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+input:focus, select:focus, textarea:focus {
+  border: 1.5px solid #0072ff;
+}
