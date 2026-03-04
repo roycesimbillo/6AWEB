@@ -1,0 +1,133 @@
+/* Background */
+body, .motorcycle-main {
+  background: #181818;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+.motorcycle-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  background: #222;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #000a;
+}
+.main-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+  color: #f5f5f5;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+/* Form Containers */
+.motorcycle-form {
+  background: #232323;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0006;
+  margin-bottom: 32px;
+}
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.form-row label {
+  flex: 1 0 160px;
+  color: #f5f5f5;
+  font-weight: 500;
+}
+.form-row input,
+.form-row select {
+  flex: 2 0 240px;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #333;
+  color: #f5f5f5;
+  font-size: 1rem;
+}
+.form-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #444;
+}
+.submit-btn, .clear-btn {
+  background: #444;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.submit-btn:hover, .clear-btn:hover {
+  background: #333;
+}
+
+/* Motorcycle List */
+.motorcycle-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Motorcycle Card */
+.motorcycle-card {
+  background: #232323;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0006;
+  padding: 18px 22px;
+  min-width: 260px;
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f5f5f5;
+  margin-bottom: 8px;
+}
+.card-body {
+  margin-bottom: 12px;
+  color: #f5f5f5;
+}
+.color-dot {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 6px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 8px #222;
+  vertical-align: middle;
+}
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+.edit-btn, .delete-btn {
+  background: #444;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.edit-btn:hover, .delete-btn:hover {
+  background: #333;
+}

@@ -1,0 +1,93 @@
+<div class="motorcycle-main">
+  <h1 class="main-title">Motorcycle Inventory</h1>
+  <form (ngSubmit)="isEditing ? updateMotorcycle() : addMotorcycle()" class="motorcycle-form">
+    <div class="form-row">
+      <label>Brand:</label>
+      <input type="text" [(ngModel)]="motorcycleForm.brand" name="brand" required />
+    </div>
+    <div class="form-row">
+      <label>Model:</label>
+      <input type="text" [(ngModel)]="motorcycleForm.model" name="model" required />
+    </div>
+    <div class="form-row">
+      <label>Year:</label>
+      <input type="number" [(ngModel)]="motorcycleForm.year" name="year" min="1980" [max]="yearMax" required />
+    </div>
+    <div class="form-row">
+      <label>Type:</label>
+      <select [(ngModel)]="motorcycleForm.type" name="type" required>
+        <option value="">Select Type</option>
+        <option value="Cruiser">Cruiser</option>
+        <option value="Sport">Sport</option>
+        <option value="Touring">Touring</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Scooter">Scooter</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label>Engine Capacity:</label>
+      <select [(ngModel)]="motorcycleForm.engineCapacity" name="engineCapacity" required>
+        <option value="">Select Capacity</option>
+        <option value="150cc">150cc</option>
+        <option value="250cc">250cc</option>
+        <option value="400cc">400cc</option>
+        <option value="600cc">600cc</option>
+        <option value="1000cc">1000cc</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label>Color:</label>
+      <select [(ngModel)]="motorcycleForm.color" name="color" required>
+        <option value="">Select Color</option>
+        <option value="Black">Black</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Silver">Silver</option>
+        <option value="Custom">Custom</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label><input type="checkbox" [(ngModel)]="motorcycleForm.hasABS" name="hasABS" /> ABS</label>
+    </div>
+    <div class="form-row">
+      <label><input type="checkbox" [(ngModel)]="motorcycleForm.hasQuickShifter" name="hasQuickShifter" /> Quickshifter</label>
+    </div>
+    <div class="form-row">
+      <label>Features:</label>
+      <select multiple [(ngModel)]="motorcycleForm.features" name="features">
+        <option value="LED Lights">LED Lights</option>
+        <option value="Bluetooth">Bluetooth</option>
+        <option value="Heated Grips">Heated Grips</option>
+        <option value="Luggage Rack">Luggage Rack</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <button type="submit" class="submit-btn">{{isEditing ? 'Update' : 'Add'}}</button>
+      <button type="button" class="clear-btn" (click)="clearForm()">Clear</button>
+    </div>
+  </form>
+
+  <div class="motorcycle-list">
+    <div *ngFor="let moto of motorcycles" class="motorcycle-card">
+      <div class="card-header">
+        <span class="brand">{{moto.brand}}</span>
+        <span class="model">{{moto.model}}</span>
+        <span class="year">({{moto.year}})</span>
+      </div>
+      <div class="card-body">
+        <div><b>Type:</b> {{moto.type}}</div>
+        <div><b>Engine:</b> {{moto.engineCapacity}}</div>
+        <div><b>Color:</b> <span class="color-dot" [style.background]="moto.color.toLowerCase()"> </span> {{moto.color}}</div>
+        <div><b>ABS:</b> {{moto.hasABS ? 'Yes' : 'No'}}</div>
+        <div><b>Quickshifter:</b> {{moto.hasQuickShifter ? 'Yes' : 'No'}}</div>
+        <div><b>Features:</b> {{moto.features ? moto.features.join(', ') : ''}}</div>
+      </div>
+      <div class="card-actions">
+        <button class="edit-btn" (click)="editMotorcycle(moto)">Edit</button>
+        <button class="delete-btn" (click)="deleteMotorcycle(moto.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet />
